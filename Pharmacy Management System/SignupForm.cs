@@ -109,5 +109,10 @@ namespace Pharmacy_Management_System
                 }
             }
         }
+
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

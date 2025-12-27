@@ -191,6 +191,7 @@
             this.btSave.TabIndex = 14;
             this.btSave.Text = "Save";
             this.btSave.UseVisualStyleBackColor = true;
+           
             // 
             // dgvStaff
             // 

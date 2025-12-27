@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,8 @@ namespace Pharmacy_Management_System
 {
     internal class db
     {
-        string constring = "Data Source = .\\SQLEXPRESS;Initial Catalog = PharmacyDB; Integrated Security = True; Encrypt=False";
+        //string constring = "Data Source = .\\SQLEXPRESS;Initial Catalog = PharmacyDB; Integrated Security = True; Encrypt=False";
+        string constring = "Data Source =.\\SQLEXPRESS;Initial Catalog = PharmacyDB; Integrated Security = True;  Encrypt=False";
 
         public DataRow read(string q)
         {

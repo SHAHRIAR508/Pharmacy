@@ -78,6 +78,7 @@
             this.btStaff.TabIndex = 1;
             this.btStaff.Text = "Staff";
             this.btStaff.UseVisualStyleBackColor = true;
+            this.btStaff.Click += new System.EventHandler(this.btStaff_Click);
             // 
             // btsales
             // 

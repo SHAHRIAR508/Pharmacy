@@ -62,5 +62,10 @@ namespace Pharmacy_Management_System
             signupForm.Visible = true;
             signupForm.Show();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

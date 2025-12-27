@@ -52,5 +52,14 @@ namespace Pharmacy_Management_System
             medecineForm.Show();
             this.Close();
         }
+
+        private void btStaff_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            add add = new add();
+            add.Visible = true;
+            add.Show();
+            this.Close();
+        }
     }
 }

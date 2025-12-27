@@ -28,3 +28,19 @@ C:\Users\nurea\OneDrive\Desktop\C#\New folder\Pharmacy Management System\obj\Deb
 C:\Users\nurea\OneDrive\Desktop\C#\New folder\Pharmacy Management System\obj\Debug\Pharmacy Management System.csproj.CoreCompileInputs.cache
 C:\Users\nurea\OneDrive\Desktop\C#\New folder\Pharmacy Management System\obj\Debug\Pharmacy Management System.exe
 C:\Users\nurea\OneDrive\Desktop\C#\New folder\Pharmacy Management System\obj\Debug\Pharmacy Management System.pdb
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy Management System.csproj.AssemblyReference.cache
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy Management System.exe.config
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.Dashboard.resources
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.LoginForm.resources
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.MedecineForm.resources
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.Properties.Resources.resources
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.SignupForm.resources
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.StaffForm.resources
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy Management System.csproj.GenerateResource.cache
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy Management System.csproj.CoreCompileInputs.cache
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy Management System.exe
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy Management System.pdb
+E:\project\Projects\Pharmacy Management System\bin\Debug\Pharmacy Management System.exe.config
+E:\project\Projects\Pharmacy Management System\bin\Debug\Pharmacy Management System.exe
+E:\project\Projects\Pharmacy Management System\bin\Debug\Pharmacy Management System.pdb
+E:\project\Projects\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.add.resources
