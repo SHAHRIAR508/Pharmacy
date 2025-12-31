@@ -42,7 +42,7 @@
             this.butMedecine.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.butMedecine.Location = new System.Drawing.Point(253, 436);
             this.butMedecine.Name = "butMedecine";
-            this.butMedecine.Size = new System.Drawing.Size(145, 60);
+            this.butMedecine.Size = new System.Drawing.Size(150, 60);
             this.butMedecine.TabIndex = 26;
             this.butMedecine.Text = " Add Medecine";
             this.butMedecine.UseVisualStyleBackColor = false;
@@ -68,7 +68,7 @@
             this.btSales.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btSales.Location = new System.Drawing.Point(644, 436);
             this.btSales.Name = "btSales";
-            this.btSales.Size = new System.Drawing.Size(145, 60);
+            this.btSales.Size = new System.Drawing.Size(150, 60);
             this.btSales.TabIndex = 24;
             this.btSales.Text = "View Sales";
             this.btSales.UseVisualStyleBackColor = false;

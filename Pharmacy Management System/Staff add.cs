@@ -23,9 +23,9 @@ namespace Pharmacy_Management_System
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            LoginForm loginForm = new LoginForm();
-            loginForm.Visible = true;
-            loginForm.Show();
+            Dashboard Dashboard = new Dashboard();
+            Dashboard.Visible = true;
+            Dashboard.Show();
             this.Close();
         }
         db newdb = new db();

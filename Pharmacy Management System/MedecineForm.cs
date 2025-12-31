@@ -104,6 +104,13 @@ namespace Pharmacy_Management_System
             txbPrice.Clear();
         }
 
-        
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Dashboard Dashboard = new Dashboard();
+            Dashboard.Visible = true;
+            Dashboard.Show();
+            this.Close();
+        }
     } 
 }

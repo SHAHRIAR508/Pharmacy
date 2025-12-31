@@ -49,12 +49,6 @@ namespace Pharmacy_Management_System
             this.Close();
         }
 
-        private void butadd_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            SignupForm signupForm = new SignupForm();
-            signupForm.Visible = true;
-            signupForm.Show();
-        }
+        
     }
 }

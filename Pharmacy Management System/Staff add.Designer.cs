@@ -59,7 +59,7 @@
             this.btnSave.AutoSize = true;
             this.btnSave.BackColor = System.Drawing.Color.SkyBlue;
             this.btnSave.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(816, 99);
+            this.btnSave.Location = new System.Drawing.Point(775, 99);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(225, 47);
@@ -73,7 +73,7 @@
             this.btnDelete.AutoSize = true;
             this.btnDelete.BackColor = System.Drawing.Color.SkyBlue;
             this.btnDelete.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(816, 172);
+            this.btnDelete.Location = new System.Drawing.Point(775, 172);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(225, 47);
@@ -86,7 +86,7 @@
             this.btnClear.AutoSize = true;
             this.btnClear.BackColor = System.Drawing.Color.SkyBlue;
             this.btnClear.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(816, 246);
+            this.btnClear.Location = new System.Drawing.Point(775, 246);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(225, 47);
@@ -99,7 +99,7 @@
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.BackColor = System.Drawing.Color.SkyBlue;
             this.btnRefresh.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(816, 320);
+            this.btnRefresh.Location = new System.Drawing.Point(775, 320);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(225, 47);
@@ -112,7 +112,7 @@
             this.btnBack.AutoSize = true;
             this.btnBack.BackColor = System.Drawing.Color.SkyBlue;
             this.btnBack.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(816, 25);
+            this.btnBack.Location = new System.Drawing.Point(775, 25);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(225, 47);
@@ -135,7 +135,7 @@
             this.price,
             this.quantity,
             this.category});
-            this.dgvProductList.Location = new System.Drawing.Point(77, 422);
+            this.dgvProductList.Location = new System.Drawing.Point(36, 422);
             this.dgvProductList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvProductList.Name = "dgvProductList";
             this.dgvProductList.ReadOnly = true;
@@ -192,7 +192,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(267, 348);
+            this.txtSearch.Location = new System.Drawing.Point(226, 348);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(452, 27);
@@ -202,7 +202,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(72, 358);
+            this.lblSearch.Location = new System.Drawing.Point(31, 358);
             this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(62, 20);
@@ -217,7 +217,7 @@
             this.cmbTitel.Items.AddRange(new object[] {
             "Manager",
             "Employ"});
-            this.cmbTitel.Location = new System.Drawing.Point(267, 271);
+            this.cmbTitel.Location = new System.Drawing.Point(226, 271);
             this.cmbTitel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTitel.Name = "cmbTitel";
             this.cmbTitel.Size = new System.Drawing.Size(452, 28);
@@ -227,7 +227,7 @@
             // 
             this.lblRole.AutoSize = true;
             this.lblRole.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRole.Location = new System.Drawing.Point(72, 281);
+            this.lblRole.Location = new System.Drawing.Point(31, 281);
             this.lblRole.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(44, 20);
@@ -237,7 +237,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(267, 86);
+            this.txtName.Location = new System.Drawing.Point(226, 86);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(452, 27);
@@ -246,7 +246,7 @@
             // txtNumber
             // 
             this.txtNumber.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(267, 148);
+            this.txtNumber.Location = new System.Drawing.Point(226, 148);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(452, 27);
@@ -255,7 +255,7 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(267, 209);
+            this.txtAddress.Location = new System.Drawing.Point(226, 209);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(452, 27);
@@ -265,7 +265,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(72, 96);
+            this.lblName.Location = new System.Drawing.Point(31, 96);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(54, 20);
@@ -276,7 +276,7 @@
             // 
             this.lblNamber.AutoSize = true;
             this.lblNamber.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamber.Location = new System.Drawing.Point(72, 158);
+            this.lblNamber.Location = new System.Drawing.Point(31, 158);
             this.lblNamber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNamber.Name = "lblNamber";
             this.lblNamber.Size = new System.Drawing.Size(73, 20);
@@ -287,7 +287,7 @@
             // 
             this.lblAddras.AutoSize = true;
             this.lblAddras.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddras.Location = new System.Drawing.Point(72, 219);
+            this.lblAddras.Location = new System.Drawing.Point(31, 219);
             this.lblAddras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddras.Name = "lblAddras";
             this.lblAddras.Size = new System.Drawing.Size(65, 20);
@@ -298,7 +298,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(267, 25);
+            this.txtID.Location = new System.Drawing.Point(226, 25);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(452, 27);
@@ -308,7 +308,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(72, 35);
+            this.lblID.Location = new System.Drawing.Point(31, 35);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(27, 20);
@@ -320,7 +320,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1113, 699);
+            this.ClientSize = new System.Drawing.Size(1023, 679);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);

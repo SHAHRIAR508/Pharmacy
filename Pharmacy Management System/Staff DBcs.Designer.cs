@@ -40,9 +40,9 @@
             this.butSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butSell.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.butSell.Location = new System.Drawing.Point(222, 353);
+            this.butSell.Location = new System.Drawing.Point(232, 324);
             this.butSell.Name = "butSell";
-            this.butSell.Size = new System.Drawing.Size(145, 60);
+            this.butSell.Size = new System.Drawing.Size(150, 60);
             this.butSell.TabIndex = 30;
             this.butSell.Text = " Sell Medecine";
             this.butSell.UseVisualStyleBackColor = false;
@@ -65,9 +65,9 @@
             this.btSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSales.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btSales.Location = new System.Drawing.Point(613, 353);
+            this.btSales.Location = new System.Drawing.Point(621, 324);
             this.btSales.Name = "btSales";
-            this.btSales.Size = new System.Drawing.Size(145, 60);
+            this.btSales.Size = new System.Drawing.Size(150, 60);
             this.btSales.TabIndex = 28;
             this.btSales.Text = "View Sales";
             this.btSales.UseVisualStyleBackColor = false;
@@ -78,7 +78,7 @@
             this.btLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLogout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btLogout.Location = new System.Drawing.Point(840, 510);
+            this.btLogout.Location = new System.Drawing.Point(840, 468);
             this.btLogout.Name = "btLogout";
             this.btLogout.Size = new System.Drawing.Size(95, 41);
             this.btLogout.TabIndex = 27;
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(950, 563);
+            this.ClientSize = new System.Drawing.Size(952, 523);
             this.Controls.Add(this.butSell);
             this.Controls.Add(this.lblStaff);
             this.Controls.Add(this.btSales);
