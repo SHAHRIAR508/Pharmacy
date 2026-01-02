@@ -68,6 +68,7 @@
             this.dgvMed.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMed.Size = new System.Drawing.Size(822, 203);
             this.dgvMed.TabIndex = 32;
+            this.dgvMed.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMed_CellContentClick);
             // 
             // btSave
             // 

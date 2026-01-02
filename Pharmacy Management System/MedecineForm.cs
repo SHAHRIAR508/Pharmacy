@@ -64,36 +64,27 @@ namespace Pharmacy_Management_System
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-            string medname = txbName.Text;
+           string medname = txbName.Text;
             if (txbName.Text == null)
             {
                 MessageBox.Show("Please enter the medicine name to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            DialogResult result = MessageBox.Show($"Are you sure you want to delete '{medname}' from the database?",
-                                                 "Confirm Delete",
-                                                 MessageBoxButtons.YesNo,
-                                                 MessageBoxIcon.Warning);
-
-            if (result == DialogResult.Yes)
+            else
             {
-                try
+                string query = "DELETE FROM Medicine WHERE medName = '" + medname + "'";
+                int rowsAffected = newdb.write(query);
+                if (rowsAffected > 0)
                 {
-
-                    string query = "DELETE FROM Medicine WHERE medName = '" + medname + "'";
-                    newdb.write(query);
-
                     MessageBox.Show("Medicine deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-                    ClearFormFields();
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error deleting medicine: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No medicine found with the given name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            load_products();
+            ClearFormFields();
         }
 
         private void ClearFormFields()
@@ -111,6 +102,11 @@ namespace Pharmacy_Management_System
             Dashboard.Visible = true;
             Dashboard.Show();
             this.Close();
+        }
+
+        private void dgvMed_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     } 
 }

@@ -33,12 +33,6 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
-            this.dgvProductList = new System.Windows.Forms.DataGridView();
-            this.productId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.cmbTitel = new System.Windows.Forms.ComboBox();
@@ -51,7 +45,8 @@
             this.lblAddras = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).BeginInit();
+            this.dgvAdd = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -80,6 +75,7 @@
             this.btnDelete.TabIndex = 58;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -120,74 +116,6 @@
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // dgvProductList
-            // 
-            this.dgvProductList.AllowUserToAddRows = false;
-            this.dgvProductList.AllowUserToDeleteRows = false;
-            this.dgvProductList.AllowUserToResizeColumns = false;
-            this.dgvProductList.AllowUserToResizeRows = false;
-            this.dgvProductList.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dgvProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productId,
-            this.productName,
-            this.price,
-            this.quantity,
-            this.category});
-            this.dgvProductList.Location = new System.Drawing.Point(36, 422);
-            this.dgvProductList.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvProductList.Name = "dgvProductList";
-            this.dgvProductList.ReadOnly = true;
-            this.dgvProductList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductList.Size = new System.Drawing.Size(964, 251);
-            this.dgvProductList.TabIndex = 54;
-            // 
-            // productId
-            // 
-            this.productId.DataPropertyName = "id";
-            this.productId.HeaderText = " ID";
-            this.productId.MinimumWidth = 8;
-            this.productId.Name = "productId";
-            this.productId.ReadOnly = true;
-            this.productId.Width = 150;
-            // 
-            // productName
-            // 
-            this.productName.DataPropertyName = "name";
-            this.productName.HeaderText = " Name";
-            this.productName.MinimumWidth = 8;
-            this.productName.Name = "productName";
-            this.productName.ReadOnly = true;
-            this.productName.Width = 150;
-            // 
-            // price
-            // 
-            this.price.DataPropertyName = "number";
-            this.price.HeaderText = "Number";
-            this.price.MinimumWidth = 8;
-            this.price.Name = "price";
-            this.price.ReadOnly = true;
-            this.price.Width = 150;
-            // 
-            // quantity
-            // 
-            this.quantity.DataPropertyName = "addras";
-            this.quantity.HeaderText = "Addras";
-            this.quantity.MinimumWidth = 8;
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
-            this.quantity.Width = 150;
-            // 
-            // category
-            // 
-            this.category.DataPropertyName = "titel";
-            this.category.HeaderText = "Titel";
-            this.category.MinimumWidth = 8;
-            this.category.Name = "category";
-            this.category.ReadOnly = true;
-            this.category.Width = 150;
             // 
             // txtSearch
             // 
@@ -315,18 +243,29 @@
             this.lblID.TabIndex = 42;
             this.lblID.Text = "ID";
             // 
+            // dgvAdd
+            // 
+            this.dgvAdd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAdd.Location = new System.Drawing.Point(35, 398);
+            this.dgvAdd.Name = "dgvAdd";
+            this.dgvAdd.RowHeadersWidth = 51;
+            this.dgvAdd.RowTemplate.Height = 24;
+            this.dgvAdd.Size = new System.Drawing.Size(965, 269);
+            this.dgvAdd.TabIndex = 60;
+            this.dgvAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdd_CellContentClick);
+            // 
             // add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1023, 679);
+            this.Controls.Add(this.dgvAdd);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.dgvProductList);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.cmbTitel);
@@ -341,25 +280,18 @@
             this.Controls.Add(this.lblID);
             this.Name = "add";
             this.Text = "ADD";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.DataGridView dgvProductList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn category;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ComboBox cmbTitel;
@@ -372,5 +304,6 @@
         private System.Windows.Forms.Label lblAddras;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.DataGridView dgvAdd;
     }
 }

@@ -38,13 +38,13 @@ namespace Pharmacy_Management_System
                 MessageBox.Show("Login successful- admin", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
-            else  if (dr != null)
+            else if (dr != null)
             {
                 this.Visible = false;
-                Manager_DB manager_DB= new Manager_DB();
+                Manager_DB manager_DB = new Manager_DB();
                 manager_DB.Visible = true;
                 manager_DB.Show();
-               // MessageBox.Show("Login successful- Stuff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // MessageBox.Show("Login successful- Stuff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else if (dr == null)
@@ -52,22 +52,7 @@ namespace Pharmacy_Management_System
                 MessageBox.Show("No user Found", "error", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
- 
-        }
 
-        private void btSignup_Click(object sender, EventArgs e)
-        {
-            this.Visible = false;
-            SignupForm signupForm = new SignupForm();
-            signupForm.Visible = true;
-            signupForm.Show();
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
+        }   
     }
 }
