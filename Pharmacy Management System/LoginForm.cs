@@ -44,8 +44,16 @@ namespace Pharmacy_Management_System
                 Manager_DB manager_DB = new Manager_DB();
                 manager_DB.Visible = true;
                 manager_DB.Show();
-                // MessageBox.Show("Login successful- Stuff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Login successful- Manager", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
+            else if( dr != null)
+            {
+                this.Visible = false;
+                StaffDasboard staffDasboard = new StaffDasboard();
+                staffDasboard.Visible = true;
+                staffDasboard.Show();
+                MessageBox.Show("Login successful- Staff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (dr == null)
             {
@@ -53,6 +61,6 @@ namespace Pharmacy_Management_System
 
             }
 
-        }   
+        }
     }
 }

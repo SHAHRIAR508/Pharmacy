@@ -131,7 +131,7 @@
             this.Controls.Add(this.labellogin);
             this.Name = "LoginForm";
             this.Text = "LogIn";
-            //this.ResumeLayout(false);
+            this.ResumeLayout(false);
             this.PerformLayout();
 
         }

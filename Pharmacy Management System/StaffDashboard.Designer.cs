@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Management_System
 {
-    partial class StaffForm
+    partial class StaffDasboard
     {
         /// <summary>
         /// Required designer variable.
@@ -43,13 +43,13 @@
             this.btEdit = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.dgvStaff = new System.Windows.Forms.DataGridView();
-            this.btSEARCH = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btSEARCH = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,9 +101,9 @@
             this.lbId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbId.Location = new System.Drawing.Point(42, 35);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(31, 20);
+            this.lbId.Size = new System.Drawing.Size(42, 20);
             this.lbId.TabIndex = 4;
-            this.lbId.Text = " ID";
+            this.lbId.Text = " PID";
             this.lbId.Click += new System.EventHandler(this.lbId_Click);
             // 
             // lbPrice
@@ -201,29 +201,6 @@
             this.dgvStaff.Size = new System.Drawing.Size(673, 169);
             this.dgvStaff.TabIndex = 15;
             // 
-            // btSEARCH
-            // 
-            this.btSEARCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSEARCH.ForeColor = System.Drawing.Color.Navy;
-            this.btSEARCH.Location = new System.Drawing.Point(555, 204);
-            this.btSEARCH.Name = "btSEARCH";
-            this.btSEARCH.Size = new System.Drawing.Size(84, 36);
-            this.btSEARCH.TabIndex = 16;
-            this.btSEARCH.Text = "Serach";
-            this.btSEARCH.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Tablet",
-            "Antibiotic",
-            "Antiseptics"});
-            this.comboBox1.Location = new System.Drawing.Point(150, 147);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(212, 24);
-            this.comboBox1.TabIndex = 17;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "ID";
@@ -259,7 +236,30 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 125;
             // 
-            // StaffForm
+            // btSEARCH
+            // 
+            this.btSEARCH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSEARCH.ForeColor = System.Drawing.Color.Navy;
+            this.btSEARCH.Location = new System.Drawing.Point(555, 204);
+            this.btSEARCH.Name = "btSEARCH";
+            this.btSEARCH.Size = new System.Drawing.Size(84, 36);
+            this.btSEARCH.TabIndex = 16;
+            this.btSEARCH.Text = "Serach";
+            this.btSEARCH.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Tablet",
+            "Antibiotic",
+            "Antiseptics"});
+            this.comboBox1.Location = new System.Drawing.Point(147, 144);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(212, 24);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // StaffDasboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -282,8 +282,8 @@
             this.Controls.Add(this.cmbCategory);
             this.Controls.Add(this.lblAmount);
             this.Controls.Add(this.lbName);
-            this.Name = "StaffForm";
-            this.Text = "ADD ITEM";
+            this.Name = "StaffDasboard";
+            this.Text = "StaffDasboardForm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

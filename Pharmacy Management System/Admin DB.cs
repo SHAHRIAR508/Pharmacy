@@ -40,10 +40,10 @@ namespace Pharmacy_Management_System
             this.Close();
         }
 
-        private void btStaff_Click(object sender, EventArgs e)
+        private void btEmployee_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            add add = new add();
+            EmployeeAdd add = new EmployeeAdd();
             add.Visible = true;
             add.Show();
             this.Close();

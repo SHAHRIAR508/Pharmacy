@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Management_System
 {
-    partial class add
+    partial class EmployeeAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,8 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.dgvAdd = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,6 +104,7 @@
             this.btnRefresh.TabIndex = 56;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnBack
             // 
@@ -144,7 +147,7 @@
             this.cmbTitel.FormattingEnabled = true;
             this.cmbTitel.Items.AddRange(new object[] {
             "Manager",
-            "Employ"});
+            "Staff"});
             this.cmbTitel.Location = new System.Drawing.Point(226, 271);
             this.cmbTitel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTitel.Name = "cmbTitel";
@@ -165,7 +168,7 @@
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(226, 86);
+            this.txtName.Location = new System.Drawing.Point(226, 73);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(452, 27);
@@ -174,7 +177,7 @@
             // txtNumber
             // 
             this.txtNumber.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumber.Location = new System.Drawing.Point(226, 148);
+            this.txtNumber.Location = new System.Drawing.Point(226, 166);
             this.txtNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(452, 27);
@@ -183,7 +186,7 @@
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(226, 209);
+            this.txtAddress.Location = new System.Drawing.Point(226, 220);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(452, 27);
@@ -193,7 +196,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(31, 96);
+            this.lblName.Location = new System.Drawing.Point(31, 80);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(54, 20);
@@ -204,7 +207,7 @@
             // 
             this.lblNamber.AutoSize = true;
             this.lblNamber.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNamber.Location = new System.Drawing.Point(31, 158);
+            this.lblNamber.Location = new System.Drawing.Point(31, 172);
             this.lblNamber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNamber.Name = "lblNamber";
             this.lblNamber.Size = new System.Drawing.Size(73, 20);
@@ -215,7 +218,7 @@
             // 
             this.lblAddras.AutoSize = true;
             this.lblAddras.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddras.Location = new System.Drawing.Point(31, 219);
+            this.lblAddras.Location = new System.Drawing.Point(31, 227);
             this.lblAddras.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAddras.Name = "lblAddras";
             this.lblAddras.Size = new System.Drawing.Size(65, 20);
@@ -236,7 +239,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(31, 35);
+            this.lblID.Location = new System.Drawing.Point(31, 40);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(27, 20);
@@ -254,12 +257,34 @@
             this.dgvAdd.TabIndex = 60;
             this.dgvAdd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAdd_CellContentClick);
             // 
-            // add
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(228, 120);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(452, 27);
+            this.textBox1.TabIndex = 61;
+            // 
+            // lbPassword
+            // 
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.Location = new System.Drawing.Point(31, 127);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(86, 20);
+            this.lbPassword.TabIndex = 62;
+            this.lbPassword.Text = "Password";
+            // 
+            // EmployeeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1023, 679);
+            this.Controls.Add(this.lbPassword);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvAdd);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
@@ -278,8 +303,8 @@
             this.Controls.Add(this.lblAddras);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblID);
-            this.Name = "add";
-            this.Text = "ADD";
+            this.Name = "EmployeeAdd";
+            this.Text = "EmployeeAdd";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -305,5 +330,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridView dgvAdd;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lbPassword;
     }
 }

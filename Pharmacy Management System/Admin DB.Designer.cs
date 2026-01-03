@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btStaff = new System.Windows.Forms.Button();
+            this.btEmployee = new System.Windows.Forms.Button();
             this.btLogout = new System.Windows.Forms.Button();
             this.btMedecine = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
             this.butseles = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btStaff
+            // btEmployee
             // 
-            this.btStaff.BackColor = System.Drawing.SystemColors.Info;
-            this.btStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btStaff.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btStaff.Location = new System.Drawing.Point(86, 337);
-            this.btStaff.Name = "btStaff";
-            this.btStaff.Size = new System.Drawing.Size(150, 60);
-            this.btStaff.TabIndex = 1;
-            this.btStaff.Text = "Staff";
-            this.btStaff.UseVisualStyleBackColor = false;
-            this.btStaff.Click += new System.EventHandler(this.btStaff_Click);
+            this.btEmployee.BackColor = System.Drawing.SystemColors.Info;
+            this.btEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEmployee.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.btEmployee.Location = new System.Drawing.Point(86, 337);
+            this.btEmployee.Name = "btEmployee";
+            this.btEmployee.Size = new System.Drawing.Size(150, 60);
+            this.btEmployee.TabIndex = 1;
+            this.btEmployee.Text = "Employee";
+            this.btEmployee.UseVisualStyleBackColor = false;
+            this.btEmployee.Click += new System.EventHandler(this.btEmployee_Click);
             // 
             // btLogout
             // 
@@ -113,7 +113,7 @@
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.btMedecine);
             this.Controls.Add(this.btLogout);
-            this.Controls.Add(this.btStaff);
+            this.Controls.Add(this.btEmployee);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.ResumeLayout(false);
@@ -122,7 +122,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btStaff;
+        private System.Windows.Forms.Button btEmployee;
         private System.Windows.Forms.Button btLogout;
         private System.Windows.Forms.Button btMedecine;
         private System.Windows.Forms.Label lblLogo;

@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Staff add.cs">
+    <Compile Include="EmployeeAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff add.Designer.cs">
-      <DependentUpon>Staff add.cs</DependentUpon>
+    <Compile Include="EmployeeAdd.Designer.cs">
+      <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="db.cs" />
     <Compile Include="Admin DB.cs">
@@ -85,14 +85,14 @@
     <Compile Include="Staff DBcs.Designer.cs">
       <DependentUpon>Staff DBcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Staff.cs">
+    <Compile Include="StaffDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Staff.Designer.cs">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <Compile Include="StaffDashboard.Designer.cs">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Staff add.resx">
-      <DependentUpon>Staff add.cs</DependentUpon>
+    <EmbeddedResource Include="EmployeeAdd.resx">
+      <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin DB.resx">
       <DependentUpon>Admin DB.cs</DependentUpon>
@@ -119,8 +119,8 @@
     <EmbeddedResource Include="Staff DBcs.resx">
       <DependentUpon>Staff DBcs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Staff.resx">
-      <DependentUpon>Staff.cs</DependentUpon>
+    <EmbeddedResource Include="StaffDashboard.resx">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

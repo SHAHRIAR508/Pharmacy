@@ -42,8 +42,9 @@ namespace Pharmacy_Management_System
             }
             load_products();
         }
-       
-        private void load_products() { 
+
+        private void load_products()
+        {
             DataTable dt = newdb.readAll("SELECT * FROM Medicine");
             if (dt != null)
             {
@@ -54,7 +55,7 @@ namespace Pharmacy_Management_System
                 dgvMed.Columns[2].HeaderText = "quant";
                 dgvMed.Columns[3].HeaderText = "price";
             }
-        
+
         }
 
         private void MedecineForm_Load(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace Pharmacy_Management_System
 
         private void btDelete_Click(object sender, EventArgs e)
         {
-           string medname = txbName.Text;
+            string medname = txbName.Text;
             if (txbName.Text == null)
             {
                 MessageBox.Show("Please enter the medicine name to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -108,5 +109,54 @@ namespace Pharmacy_Management_System
         {
 
         }
-    } 
+
+        private void btSEARCH_Click(object sender, EventArgs e)
+        {
+            string medname = txbName.Text;
+            string type = cmbType.Text;
+            string query = "SELECT * FROM Medicine WHERE medName LIKE '%" + medname + "%' OR medType LIKE '%" + type + "%'";
+            DataTable dt = newdb.readAll(query);
+            if (dt != null)
+            {
+                dgvMed.AutoGenerateColumns = true;
+                dgvMed.DataSource = dt;
+                dgvMed.Columns[0].HeaderText = "MED Type";
+                dgvMed.Columns[1].HeaderText = "name";
+                dgvMed.Columns[2].HeaderText = "quant";
+                dgvMed.Columns[3].HeaderText = "price";
+            }
+            else
+            {
+                MessageBox.Show("No medicine found with the given name or type", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            string medtype = cmbType.Text;
+            string medname = txbName.Text;  
+            string medqantity = txbQuantity.Text;
+            string medprice = txbPrice.Text;
+            string type = cmbType.Text;
+            if (txbName.Text == null)
+            {
+                MessageBox.Show("Please enter the medicine name to edit", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                string query = "UPDATE Medicine SET medType = '" + medtype + "', medQuantity = '" + medqantity + "', medPrice = '" + medprice + "' WHERE medName = '" + medname + "'";
+                int rowsAffected = newdb.write(query);
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Medicine updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No medicine found with the given name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            load_products();
+        }
+    }
 }

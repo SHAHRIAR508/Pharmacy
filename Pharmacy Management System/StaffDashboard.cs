@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Management_System
 {
-    public partial class StaffForm : Form
+    public partial class StaffDasboard : Form
     {
-        public StaffForm()
+        public StaffDasboard()
         {
             InitializeComponent();
         }

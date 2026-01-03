@@ -56,6 +56,7 @@
             this.btSEARCH.TabIndex = 33;
             this.btSEARCH.Text = "Serach";
             this.btSEARCH.UseVisualStyleBackColor = true;
+            this.btSEARCH.Click += new System.EventHandler(this.btSEARCH_Click);
             // 
             // dgvMed
             // 
@@ -92,6 +93,7 @@
             this.btEdit.TabIndex = 30;
             this.btEdit.Text = "Edit";
             this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btDelete
             // 

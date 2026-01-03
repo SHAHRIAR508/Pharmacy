@@ -13,9 +13,9 @@ using System.Xml.Linq;
 
 namespace Pharmacy_Management_System
 {
-    public partial class add : Form
+    public partial class EmployeeAdd : Form
     {
-        public add()
+        public EmployeeAdd()
         {
             InitializeComponent();
         }
@@ -52,11 +52,6 @@ namespace Pharmacy_Management_System
 
 
         }
-
-        //private void add_Load(object sender, EventArgs e)
-        //{
-
-        //}
         private void load_products()
         {
             DataTable dt = newdb.readAll("SELECT * FROM Staff");
@@ -69,9 +64,6 @@ namespace Pharmacy_Management_System
                 dgvAdd.Columns[2].HeaderText = "number";
                 dgvAdd.Columns[3].HeaderText = "adress";
                 dgvAdd.Columns[4].HeaderText = "Role";
-
-
-
             }
 
         }
@@ -89,5 +81,12 @@ namespace Pharmacy_Management_System
             MessageBox.Show("Staff deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             load_products();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            load_products();
+        }
+
+        
     }
 }
