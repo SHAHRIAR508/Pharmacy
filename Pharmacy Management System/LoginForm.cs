@@ -22,7 +22,7 @@ namespace Pharmacy_Management_System
         {
             string uname = txbUsername.Text;
             string pass = txbPassword.Text;
-            if (string.IsNullOrWhiteSpace(uname) || string.IsNullOrWhiteSpace(pass))
+            if (uname == "" || pass == "")
             {
                 MessageBox.Show("Please fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbPassword.Clear();
@@ -39,20 +39,17 @@ namespace Pharmacy_Management_System
             db newdb = new db();
             string query = "SELECT * FROM user_data WHERE Ename = '" + uname + "' AND Epassword = '" + pass + "'";
             DataRow dr = newdb.read(query);
-
             if (dr != null)
             {
-                string userRole = dr["Erole"].ToString().Trim();
-
-                UserHelper.UserRole = userRole;
-                if (userRole.Equals("Manager", StringComparison.OrdinalIgnoreCase))
+                string userRole = dr["Erole"].ToString();
+                if (userRole == "Manager")
                 {
                     MessageBox.Show("Login successful - Manager", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     Manager_DB manager_DB = new Manager_DB();
                     manager_DB.Show();
                 }
-                else if (userRole.Equals("Staff", StringComparison.OrdinalIgnoreCase))
+                else if (userRole == "Staff")
                 {
                     MessageBox.Show("Login successful - Staff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
@@ -61,16 +58,13 @@ namespace Pharmacy_Management_System
                 }
                 else
                 {
-                    MessageBox.Show("Invalid role assigned. Please contact administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txbPassword.Clear();
+                    txbUsername.Focus();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txbPassword.Clear();
-                txbUsername.Focus();
             }
         }
     }
 }
+        
+    
