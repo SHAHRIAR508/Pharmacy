@@ -91,6 +91,7 @@
     <Compile Include="StaffDashboard.Designer.cs">
       <DependentUpon>StaffDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserHelper.cs" />
     <EmbeddedResource Include="EmployeeAdd.resx">
       <DependentUpon>EmployeeAdd.cs</DependentUpon>
     </EmbeddedResource>

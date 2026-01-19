@@ -17,50 +17,60 @@ namespace Pharmacy_Management_System
         {
             InitializeComponent();
         }
+
         private void btLogin_Click(object sender, EventArgs e)
         {
             string uname = txbUsername.Text;
             string pass = txbPassword.Text;
-
-            db newdb = new db();
-            DataRow dr = newdb.read("select * from user_data where name='" + uname + "' and password='" + pass + "'");
-            Console.WriteLine(dr);
-            if (uname == "" || pass == "")
+            if (string.IsNullOrWhiteSpace(uname) || string.IsNullOrWhiteSpace(pass))
             {
-                MessageBox.Show("Fill the feilds", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill all the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txbPassword.Clear();
+                return;
             }
-            else if (uname == "admin" && pass == "admin")
+            if (uname == "admin" && pass == "admin")
             {
-                this.Visible = false;
+                MessageBox.Show("Login successful - Admin", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
                 Dashboard dash = new Dashboard();
-                dash.Visible = true;
-                MessageBox.Show("Login successful- admin", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                dash.Show();
+                return;
             }
-            else if (dr != null)
+            db newdb = new db();
+            string query = "SELECT * FROM user_data WHERE Ename = '" + uname + "' AND Epassword = '" + pass + "'";
+            DataRow dr = newdb.read(query);
+
+            if (dr != null)
             {
-                this.Visible = false;
-                Manager_DB manager_DB = new Manager_DB();
-                manager_DB.Visible = true;
-                manager_DB.Show();
-                MessageBox.Show("Login successful- Manager", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string userRole = dr["Erole"].ToString().Trim();
 
+                UserHelper.UserRole = userRole;
+                if (userRole.Equals("Manager", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("Login successful - Manager", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Manager_DB manager_DB = new Manager_DB();
+                    manager_DB.Show();
+                }
+                else if (userRole.Equals("Staff", StringComparison.OrdinalIgnoreCase))
+                {
+                    MessageBox.Show("Login successful - Staff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    Staff_DBcs Staff_DBcs = new Staff_DBcs();
+                    Staff_DBcs.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid role assigned. Please contact administrator.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txbPassword.Clear();
+                }
             }
-            else if( dr != null)
+            else
             {
-                this.Visible = false;
-                StaffDasboard staffDasboard = new StaffDasboard();
-                staffDasboard.Visible = true;
-                staffDasboard.Show();
-                MessageBox.Show("Login successful- Staff", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Invalid username or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbPassword.Clear();
+                txbUsername.Focus();
             }
-            else if (dr == null)
-            {
-                MessageBox.Show("No user Found", "error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-
         }
     }
 }
