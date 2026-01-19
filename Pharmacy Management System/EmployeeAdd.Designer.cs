@@ -30,7 +30,7 @@
         {
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
+            this.btnedit = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -48,6 +48,7 @@
             this.dgvAdd = new System.Windows.Forms.DataGridView();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             this.btnSave.AutoSize = true;
             this.btnSave.BackColor = System.Drawing.Color.SkyBlue;
             this.btnSave.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(775, 99);
+            this.btnSave.Location = new System.Drawing.Point(775, 80);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(225, 47);
@@ -70,7 +71,7 @@
             this.btnDelete.AutoSize = true;
             this.btnDelete.BackColor = System.Drawing.Color.SkyBlue;
             this.btnDelete.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(775, 172);
+            this.btnDelete.Location = new System.Drawing.Point(775, 135);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(225, 47);
@@ -79,26 +80,26 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnClear
+            // btnedit
             // 
-            this.btnClear.AutoSize = true;
-            this.btnClear.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnClear.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(775, 246);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(225, 47);
-            this.btnClear.TabIndex = 57;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            
+            this.btnedit.AutoSize = true;
+            this.btnedit.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnedit.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnedit.Location = new System.Drawing.Point(775, 190);
+            this.btnedit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnedit.Name = "btnedit";
+            this.btnedit.Size = new System.Drawing.Size(225, 47);
+            this.btnedit.TabIndex = 57;
+            this.btnedit.Text = "Edit";
+            this.btnedit.UseVisualStyleBackColor = false;
+            this.btnedit.Click += new System.EventHandler(this.btnedit_Click);
             // 
             // btnRefresh
             // 
             this.btnRefresh.AutoSize = true;
             this.btnRefresh.BackColor = System.Drawing.Color.SkyBlue;
             this.btnRefresh.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(775, 320);
+            this.btnRefresh.Location = new System.Drawing.Point(775, 254);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(225, 47);
@@ -112,7 +113,7 @@
             this.btnBack.AutoSize = true;
             this.btnBack.BackColor = System.Drawing.Color.SkyBlue;
             this.btnBack.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(775, 25);
+            this.btnBack.Location = new System.Drawing.Point(775, 13);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(225, 47);
@@ -124,7 +125,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(226, 348);
+            this.txtSearch.Location = new System.Drawing.Point(226, 331);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(452, 27);
@@ -134,7 +135,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(31, 358);
+            this.lblSearch.Location = new System.Drawing.Point(31, 338);
             this.lblSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(62, 20);
@@ -278,18 +279,33 @@
             this.lbPassword.TabIndex = 62;
             this.lbPassword.Text = "Password";
             // 
+            // button1
+            // 
+            this.button1.AutoSize = true;
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(775, 323);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(225, 47);
+            this.button1.TabIndex = 63;
+            this.button1.Text = "Lode";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EmployeeAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1023, 679);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.dgvAdd);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnedit);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.txtSearch);
@@ -306,7 +322,6 @@
             this.Controls.Add(this.lblID);
             this.Name = "EmployeeAdd";
             this.Text = "EmployeeAdd";
-            this.Load += new System.EventHandler(this.EmployeeAdd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -316,7 +331,7 @@
         #endregion
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnedit;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtSearch;
@@ -334,5 +349,6 @@
         private System.Windows.Forms.DataGridView dgvAdd;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lbPassword;
+        private System.Windows.Forms.Button button1;
     }
 }
